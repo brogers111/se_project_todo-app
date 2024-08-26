@@ -1,17 +1,28 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+# Project Snapshots
 
-## Functionality
+![desktop-view](./images/desktop-view.png)
+![mobile-view](./images/mobile-view.png)
 
-Give a more detailed explanation of the project and its functionality.
+# Description
 
-## Technology
+This application allows users to add their own to-do list items with specific dates for completion. It also allows users to check off when those list items have been completed and delete items that are no longer necessary.
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+## Tech Stack
+
+- Semantic HTML5
+- CSS
+- Media Queries
+- Flexbox
+- JavaScript
+- JS Classes
 
 ## Deployment
 
-This project is deployed on GitHub Pages:
+Feel free to view the completed project by clicking the [link here.](https://brogers111.github.io/se_project_todo-app/)
 
-- ADD LINK HERE
+## Future Improvements
+
+- Editing existing to-do list items
+- User sign-in (login/logout functionality)
