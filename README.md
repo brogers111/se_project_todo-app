@@ -1,11 +1,11 @@
 # Simple Todo App
 
-# Project Snapshots
+## Project Snapshots
 
 ![desktop-view](./images/desktop-view.png)
 ![mobile-view](./images/mobile-view.png)
 
-# Description
+## Description
 
 This application allows users to add their own to-do list items with specific dates for completion. It also allows users to check off when those list items have been completed and delete items that are no longer necessary.
 
