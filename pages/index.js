@@ -28,19 +28,26 @@ function handleTotal(total) {
   todoCounter.updateTotal(total);
 }
 
+function generateTodo(item) {
+  const todo = new Todo(
+    item,
+    "#todo-template",
+    handleCheck,
+    handleDelete,
+    handleTotal
+  );
+  return todo.getView();
+}
+
+function renderTodo(item) {
+  const todoElement = generateTodo(item);
+  section.addItem(todoElement);
+}
+
 const section = new Section({
   items: initialTodos,
-
   renderer: (item) => {
-    const todo = new Todo(
-      item,
-      "#todo-template",
-      handleCheck,
-      handleDelete,
-      handleTotal
-    );
-    const todoElement = todo.getView();
-    section.addItem(todoElement);
+    renderTodo(item);
   },
   containerSelector: ".todos__list",
 });
@@ -60,16 +67,7 @@ const addTodoPopup = new PopupWithForm({
 
     const values = { name, date, id };
 
-    // Use the Section class to add new todo
-    const todo = new Todo(
-      values,
-      "#todo-template",
-      handleCheck,
-      handleDelete,
-      handleTotal
-    );
-    const todoElement = todo.getView();
-    section.addItem(todoElement);
+    renderTodo(values);
 
     todoCounter.updateTotal(true);
 
